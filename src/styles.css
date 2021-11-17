@@ -31,11 +31,14 @@ button {
   color: blue;
 }
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+.weather-app {
   padding: 20px;
-  border-radius: 7px;
+  border: 7px;
+  border-radius: 5px;
 }
 .weather-icon {
   color: royalblue;
@@ -47,7 +50,7 @@ button {
 }
 #temperature {
   color: black;
-  font-size: 500px;
+  font-size: 50px;
 }
 .sun-icon {
   color: goldenrod;

@@ -14,6 +14,7 @@
 
 <body>
     <div class="container border">
+        <div class="weather-app-wrapper">
 
         <i class="fas fa-cloud-sun-rain weather-icon"></i>
 
@@ -40,12 +41,18 @@
         <br />
         <div class="row">
             <div class="col-6">
+                <div class="clearfix">
                 <img 
                 src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                 alt="clear"
+                class="float-left"
+                />
+                <div class="float-left">
                 <span temperature id="temperature">19</span>
              <a href="#" id="celsius-link">&#176;C </a> |
                 <a href="#" id="far-link">&#176;F </a>
+                </div>
+                </div>
             </div>
             <div class="col-6">
                 <ul>
@@ -95,11 +102,11 @@
             <div class="col-2">17&#176;C</div>
             <br />
             <small>
-                <a href="https://github.com/lydiaryson/weather-app.git" target="_blank">
-                    Open-Source code</a> by Lydia Ryson
+                </div>
         </div>
     </div>
-   
+<a href="https://github.com/lydiaryson/latest-weather-app" target="_blank">
+    Open-Source code</a> by Lydia Ryson
 </body>
 <script src="src/index.js"></script>
 
