@@ -52,6 +52,12 @@ button {
   color: black;
   font-size: 50px;
 }
+
+#footer {
+  display: block;
+  color: red;
+  text-align: center;
+}
 .sun-icon {
   color: goldenrod;
   font-size: 25px;
