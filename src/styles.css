@@ -1,0 +1,34 @@
+h1 {
+  color: blue;
+}
+h2 {
+  color: blue;
+  font-size: 26px;
+}
+h4 {
+  color: green;
+}
+.weather-app {
+  max-width: 600px;
+  margin: ;
+}
+.weather-icon {
+  color: royalblue;
+  font-size: 60px;
+}
+.temperatureDescription {
+  color: red;
+  font-size: 15px;
+}
+.temperature {
+  font-size: 500px;
+}
+.sun-icon {
+  color: goldenrod;
+  font-size: 25px;
+}
+button {
+  margin: 0 auto;
+  background: blanchedalmond;
+  color: blue;
+}
