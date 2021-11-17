@@ -1,5 +1,7 @@
 h1 {
   color: blue;
+  font-size: 30px;
+  font-weight: 100px;
 }
 h2 {
   color: blue;
@@ -10,7 +12,7 @@ h4 {
 }
 li {
   list-style: none;
-  color: green;
+  color: black;
 }
 button {
   margin: 0 auto;
