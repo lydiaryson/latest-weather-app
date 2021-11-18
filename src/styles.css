@@ -44,20 +44,22 @@ button {
   color: royalblue;
   font-size: 60px;
 }
+
+.sun-icon {
+  color: goldenrod;
+  font-size: 30px;
+}
+
 #tempDescription {
   color: blue;
   font-size: 19px;
 }
 #temperature {
   color: black;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 #footer {
   display: block;
   text-align: center;
-}
-.sun-icon {
-  color: goldenrod;
-  font-size: 25px;
 }
