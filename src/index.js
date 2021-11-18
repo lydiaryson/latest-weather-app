@@ -41,12 +41,12 @@ function showCity(event) {
 }
 
 function showTemperature(response) {
-  console.log(response);
-  let city = document.querySelector("h2");
+   let city = document.querySelector("h2");
   city.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = temperature;
+  celsiusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   let description = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#tempDescription");
   descriptionElement.innerHTML = `${description}`;
@@ -55,7 +55,8 @@ function showTemperature(response) {
   let windElemeht = document.querySelector("#wind");
   windElemeht.innerHTML = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
+
+    iconElement.setAttribute(
     "src",
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt",response.data.weather[0].description);
@@ -83,3 +84,26 @@ function getCurrentPosition(event) {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
+function displayFahrenheitTemperature (event) {
+  event.preventDefault ();
+  let fahrenheitTemperature = (19 * 9) / 5 + 32;
+ let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = Math.round (fahrenheitTemperature);
+} 
+
+function displayCelsiusTemperature (event) {
+event.preventDefault ();
+let temperatureElement = document.querySelector("#temperature");
+temperatureElement.innerHTML = (celsiusTemperature);
+
+}
+
+let fahrenheitLink = document.querySelector("fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+
+let celsiusLink = document.querySelector("celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let celsiusTemperature = null
