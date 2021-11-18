@@ -41,6 +41,10 @@ button {
   border: 7px;
   border-radius: 5px;
 }
+
+.humidity {
+  color: rebeccapurple;
+}
 .weather-icon {
   color: royalblue;
   font-size: 60px;
