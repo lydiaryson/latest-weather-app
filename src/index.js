@@ -44,12 +44,13 @@ function showTemperature(response) {
   console.log(response);
   let city = document.querySelector("h2");
   city.innerHTML = response.data.name;
-  let Temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Temperature;
+  temperatureElement.innerHTML = temperature;
   let description = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#tempDescription");
   descriptionElement.innerHTML = `${description}`;
+
 }
 
 function showPosition(position) {
