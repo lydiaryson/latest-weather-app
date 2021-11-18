@@ -48,7 +48,7 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Temperature;
   let description = response.data.weather[0].description;
-  let descriptionElement = document.querySelector("#TempDescription");
+  let descriptionElement = document.querySelector("#tempDescription");
   descriptionElement.innerHTML = `${description}`;
 }
 
