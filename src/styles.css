@@ -67,8 +67,9 @@ button {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.6;
+  color: blue;
 }
 .weather-forecast-temperature {
   font-size: 15px;
@@ -76,9 +77,11 @@ button {
 
 .weather-forecast-temperature-max {
   opacity: 0.6;
+  color: blue;
 }
-.weather-forecast-temperature-mim {
+.weather-forecast-temperature-min {
   opacity: 0.6;
+  color: black;
 }
 #tempDescription {
   color: blue;
