@@ -19,9 +19,9 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
-let day = days.[date.getDay()];
+let day = days[date.getDay()];
 
 return `${day} ${hours}:${minutes}`;
 }
