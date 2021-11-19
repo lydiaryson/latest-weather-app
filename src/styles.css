@@ -18,13 +18,18 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
   color: black;
   padding: 0;
-  text-transform: capitalize;
+
   font-size: 18px;
   font-weight: 100;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 button {
   margin: 0 auto;
@@ -60,6 +65,11 @@ button {
   font-size: 19px;
   text-transform: capitalize;
 }
+
+#tempDescription:first-letter {
+  text-transform: capitalize;
+}
+
 #temperature {
   color: black;
   font-size: 60px;
