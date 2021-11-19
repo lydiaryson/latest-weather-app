@@ -101,7 +101,7 @@ event.preventDefault ();
 let temperatureElement = document.querySelector("#temperature");
 celsiusLink.classList.add ("active");
 fahrenheitLink.classList.remove ("active");
-temperatureElement.innerHTML = (celsiusTemperature);
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
 }
 
