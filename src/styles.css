@@ -58,6 +58,7 @@ button {
 #tempDescription {
   color: blue;
   font-size: 19px;
+  text-transform: capitalize;
 }
 #temperature {
   color: black;
