@@ -1,6 +1,5 @@
 function formatDate (timestamp) {
 
-
 let date = new Date(timestamp);
 let hours = date.getHours();
 if (hours < 10) {
@@ -26,33 +25,6 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast () {
-  let forecastElement = document.querySelector ("#forecast");
-  let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
-
-  let forecast = `<div class=row`;
-  days.forEach(function (day) {
-    forecastHTML =
-    forecastHTML +
-    `
-     <div class="row">
-            <div class="col-2">
-               <div class = "weather-forecast-date">Thu</div> 
-               <img
-               src="http://openweathermap.org/img/wn/50d@2x.png"
-               alt=""
-               width="42"/>
-               <div class="weather-forecast-temperature">
-                   <span class="weather-forecast-temperature-max">
-                       18</span>
-                <span class="weather-forecast-temperature-min">
-                    12</span>
-                             </div>
-                </div>
-                 </div>
-    `;
-  })
-}
 
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", showCity);
@@ -146,3 +118,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null
+
+displayForecast ();
