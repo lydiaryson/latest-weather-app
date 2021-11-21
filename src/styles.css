@@ -46,9 +46,7 @@ button {
 }
 
 .weather-app {
-  padding: 20px;
-  border: 7px;
-  border-radius: 5px;
+  color: blue;
 }
 
 .humidity {
@@ -87,6 +85,7 @@ button {
   opacity: 0.6;
   color: black;
 }
+
 #tempDescription {
   color: blue;
   font-size: 19px;
@@ -105,4 +104,15 @@ button {
 #footer {
   display: block;
   text-align: center;
+}
+
+#celsius-link {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+#fahrenheit-link {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
 }
