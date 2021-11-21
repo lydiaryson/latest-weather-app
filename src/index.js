@@ -119,4 +119,3 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null
 
-displayForecast ();
