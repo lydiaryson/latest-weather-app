@@ -23,7 +23,6 @@ li {
   list-style: none;
   color: black;
   padding: 0;
-
   font-size: 18px;
   font-weight: 100;
 }
@@ -31,6 +30,7 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
 button {
   margin: 0 auto;
   background: blanchedalmond;
@@ -40,7 +40,9 @@ button {
 .weather-app-wrapper {
   max-width: 500px;
   margin: 30px auto;
-  max-height: 350px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .weather-app {
