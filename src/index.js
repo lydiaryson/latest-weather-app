@@ -28,7 +28,7 @@ return `${day} ${hours}:${minutes}`;
 function displayForecast () {
   let forecastElement = document.querySelector("#forecast");
 
- let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"]
+ let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue",]
  let forecastHTML = `<div class="row">`;
  
   days.forEach(function(day) {
@@ -49,8 +49,7 @@ function displayForecast () {
                                 </span>
                                 </div>
                                    </div>
-                                    </div>
-                               </div>
+                                 
                                                            `;
 });
 
@@ -82,6 +81,7 @@ function showCity(event) {
 }
 
 function showTemperature(response) {
+  getForecast(response.data.coord);
    let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
@@ -105,7 +105,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt",response.data.weather[0].description);
 }
 
-getForecast(response.data.coord);
+
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
@@ -132,7 +132,6 @@ button.addEventListener("click", getCurrentPosition);
 
 function displayFahrenheitTemperature (event) {
   event.preventDefault ();
-let temperatureElement = document.querySelector("#temperature");
 
 celsiusLink.classList.remove ("active");
 fahrenheitLink.classList.add ("active");
