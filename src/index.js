@@ -82,18 +82,19 @@ function showCity(event) {
 }
 
 function showTemperature(response) {
-   let city = document.querySelector("h2");
+   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   celsiusTemperature = response.data.main.temp;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  temperature.innerHTML = Math.round(celsiusTemperature);
   let description = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#tempDescription");
   descriptionElement.innerHTML = `${description}`;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
   let windElemeht = document.querySelector("#wind");
+
   windElemeht.innerHTML = Math.round(response.data.wind.speed);
   let dateElement = document.querySelector ("#date");
   dateElement.innerHTML = formatDate(response.data.dt*1000)
@@ -155,5 +156,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
 let celsiusTemperature = null
 displayForecast(); 
