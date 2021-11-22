@@ -59,7 +59,7 @@ forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
+
 }
 
 let form = document.querySelector("#search-city-form");
