@@ -149,12 +149,11 @@ temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
 }
 
-let celsiusTemperature = null
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
+let celsiusTemperature = null
 displayForecast(); 
