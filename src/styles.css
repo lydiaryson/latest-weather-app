@@ -48,9 +48,6 @@ button {
   color: blue;
 }
 
-.humidity {
-  color: rebeccapurple;
-}
 .weather-icon {
   color: royalblue;
   font-size: 60px;
@@ -68,12 +65,12 @@ button {
 }
 
 .weather-forecast-date {
-  font-size: 18px;
+  font-size: 100px;
   opacity: 0.6;
   color: blue;
 }
 .weather-forecast-temperatures {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .weather-forecast-temperature-max {
@@ -83,6 +80,15 @@ button {
 .weather-forecast-temperature-min {
   opacity: 0.6;
   color: black;
+}
+
+.weather-temperature .active {
+  color: blue;
+  cursor: default;
+}
+
+.weather-temperature .active :hover {
+  text-decoration: none;
 }
 
 #tempDescription {

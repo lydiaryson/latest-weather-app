@@ -25,10 +25,11 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast () {
+function displayForecast (response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
- let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue",]
+ let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"]
  let forecastHTML = `<div class="row">`;
  
   days.forEach(function(day) {
@@ -59,7 +60,12 @@ forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
+console.log(coordinates);
+let apiKey = "4e8a325874b73356d5a566981f399eb3";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?
+lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
 
+axios.get(apiUrl).then(displayForecast); 
 }
 
 let form = document.querySelector("#search-city-form");
@@ -103,8 +109,10 @@ function showTemperature(response) {
     "src",
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt",response.data.weather[0].description);
-}
 
+
+getForecast(response.data.coord);
+}
 
 
 function showPosition(position) {
@@ -133,8 +141,8 @@ button.addEventListener("click", getCurrentPosition);
 function displayFahrenheitTemperature (event) {
   event.preventDefault ();
 let temperatureElement = document.querySelector("#temperature");
-celsiusLink.classList.remove ("active");
-fahrenheitLink.classList.add ("active");
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature* 9) / 5 + 32;
  
 temperatureElement.innerHTML = Math.round (fahrenheitTemperature);
@@ -157,4 +165,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null
-displayForecast(); 
+
