@@ -126,7 +126,7 @@ function showPosition(position) {
   let apiKey = "4e8a325874b73356d5a566981f399eb3";
   let units = "metric";
   let apiEndpoint = "https:/api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEndpoint}?lat=${latitude}&lon={longitude}
+  let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}
   &appid=${apiKey}&units=${units}`;
   axios.get(`${apiUrl}`).then(showTemperature);
 
@@ -171,3 +171,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null
 
+navigator.geolocation.getCurrentPosition(showPosition);
