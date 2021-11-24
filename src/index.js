@@ -64,7 +64,7 @@ forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-console.log(coordinates);
+
 let apiKey = "4e8a325874b73356d5a566981f399eb3";
  let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?
@@ -108,7 +108,7 @@ function showTemperature(response) {
 
   windElemeht.innerHTML = Math.round(response.data.wind.speed);
   let dateElement = document.querySelector ("#date");
-  dateElement.innerHTML = formatDate(response.data.dt*1000)
+  dateElement.innerHTML = formatDate(response.data.dt*1000);
   let iconElement = document.querySelector("#icon");
      iconElement.setAttribute(
     "src",
