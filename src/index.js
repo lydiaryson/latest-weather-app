@@ -130,7 +130,8 @@ function showPosition(position) {
   }
 
 function getCurrentPosition(event) {
-  
+  event.preventDefault();
+
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
